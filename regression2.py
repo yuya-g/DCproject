@@ -10,7 +10,7 @@ from statsmodels.stats.outliers_influence import variance_inflation_factor
 from statsmodels.tools.tools import add_constant
 from sklearn.decomposition import PCA
 
-data = pd.read_csv("/Users/isogaiyuya/Downloads/温泉道場/python/DC -project/integrated_train_data.csv")
+data = pd.read_csv("/python/DC -project/integrated_train_data.csv")
 df = pd.DataFrame(data)
 # データの準備
 X = df[['HUFL', 'MUFL', 'LUFL', 'HULL', 'MULL', 'LULL']] # 特徴量
