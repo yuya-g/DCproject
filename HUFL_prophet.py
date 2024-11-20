@@ -4,7 +4,7 @@ from prophet import Prophet
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("/Users/isogaiyuya/Downloads/温泉道場/python/DC -project/integrated_train_data.csv")
+df = pd.read_csv("/python/DC -project/integrated_train_data.csv")
 df = df[['ds', 'HUFL']]  # 日付と予測対象の値のみを選択
 df.rename(columns={'ds': 'ds', 'HUFL': 'y'}, inplace=True)
 df['ds'] = pd.to_datetime(df['ds'])  # "date"列をdatetime型に変換
