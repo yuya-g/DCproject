@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 
 # CSVファイルの読み込み
-df = pd.read_csv("/Users/isogaiyuya/Downloads/assignment-main/AI-Engineer/multivariate-time-series-prediction/ett.csv") 
+df = pd.read_csv(/assignment-main/AI-Engineer/multivariate-time-series-prediction/ett.csv") 
 
 # 1. データフレーム準備
 df = df[['date', 'HUFL']]  # 日付と予測対象の値のみを選択
