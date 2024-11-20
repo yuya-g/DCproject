@@ -13,7 +13,7 @@ from sklearn.decomposition import PCA
 data = pd.read_csv("/python/DC -project/integrated_train_data.csv")
 df = pd.DataFrame(data)
 # データの準備
-X = df[['MUFL', 'LUFL', 'MULL', 'LULL']] # 特徴量
+X = df[['HUFL', 'LUFL', 'HULL', 'LULL']] # 特徴量
 y = df['OT']  # 目的変数
 
 # データ分割
@@ -25,7 +25,6 @@ pca.fit(X_train)
 
 # 各主成分の寄与率を確認
 explained_variance_ratio = pca.explained_variance_ratio_
-print(f"Explained Variance Ratio: {explained_variance_ratio}")
 
 # 定数項を追加（必要条件）
 X_with_constant = add_constant(X_train)
@@ -34,6 +33,7 @@ X_with_constant = add_constant(X_train)
 vif_data = pd.DataFrame()
 vif_data["Feature"] = X.columns
 vif_data["VIF"] = [variance_inflation_factor(X_with_constant.values, i+1) for i in range(X.shape[1])]
+vif_data["寄与率"] = explained_variance_ratio
 
 # 出力
 print(vif_data)
