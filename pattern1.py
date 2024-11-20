@@ -19,7 +19,7 @@ from LUFL_prophet import forecast as LUFL_forecast
 from LULL_prophet import forecast as LULL_forecast
 
 # 2. OT のテストデータの読み込み
-data = pd.read_csv("/Users/isogaiyuya/Downloads/温泉道場/python/DC -project/integrated_train_data.csv")
+data = pd.read_csv("/python/DC -project/integrated_train_data.csv")
 split_point = int(len(data) * 0.7)
 data['ds'] = pd.to_datetime(data['ds'])
 df = pd.DataFrame(data)
